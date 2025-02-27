@@ -16,6 +16,10 @@
   justify-self: end;
   width: 600px;
 }
-.Navbar a {
+.profile a, .Navbar a {
   text-decoration: none;
+}
+.profile {
+  float: left;
+  padding-left: 32px;
 }
