@@ -1,3 +1,21 @@
 #root {
   margin: 0px;
 }
+.blockinput {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+.makecenter {
+  margin-top: 150px;
+}
+.Navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content:space-evenly;
+  justify-self: end;
+  width: 600px;
+}
+.Navbar a {
+  text-decoration: none;
+}
