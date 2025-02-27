@@ -1,13 +1,72 @@
-#root {
+body {
   margin: 0px;
 }
 .blockinput {
   display: block;
   margin-top: 20px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 210px;
+}
+.buttoninput {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 180px;
+  margin-left: 28px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+.container input:focus {
+  outline: none;
+}
+.container {
+  position: fixed;
+  top: 180px;
+  left: 820px;
+  border: 3px solid rgba(255, 255, 255, 0.964);
+  background-color: rgba(255, 255, 255, 0.538);
+  box-shadow: 4px 4px 40px 4px black;
+  border-radius: 20px;
+  padding: 60px
+}
+.container {
+  transition: width 2s, height 2s, transform 0.8s;
+}
+.container:hover {
+  transform:scale(1.06)
+} 
+.container h1 {
+  margin-top: 0px;
   text-align: center;
 }
-.makecenter {
-  margin-top: 150px;
+.container form p {
+  margin-top: 30px;
+  margin-left: 15px;
+}
+.container button:hover {
+  cursor: pointer;
+  background-color: rgb(106, 106, 199);
+  color: #DCE4C9;
+}
+.signup {
+  top: 48px;
+  left: 140px;
+}
+.signupleftbackground {
+  float: left;
+  background-color: #F5F5DC;
+  height: 740px;
+  width: 320px;
+}
+.signuprightbackground {
+  background-color: #DCE4C9;
+  height: 740px;
+  width: 100%;
 }
 .Navbar {
   list-style-type: none;
@@ -22,4 +81,15 @@
 .profile {
   float: left;
   padding-left: 32px;
+}
+.leftbackground {
+  float: left;
+  background-color: #DCE4C9;
+  height: 740px;
+  width: 1000px;
+}
+.rightbackground {
+  background-color: #F5F5DC;
+  height: 740px;
+  width: 100%;
 }
