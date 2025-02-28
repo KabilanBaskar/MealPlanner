@@ -1,95 +1,79 @@
 body {
   margin: 0px;
+  /* background-color: #cecbc5; */
 }
-.blockinput {
-  display: block;
-  margin-top: 20px;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  padding: 10px;
-  border-radius: 20px;
-  width: 210px;
+.backbackground {
+  position: absolute;
+  background-color: #cecbc5;
+  height: 100%;
+  width: 100%;
+  top: 0;
 }
-.buttoninput {
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 20px;
-  width: 180px;
-  margin-left: 28px;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+.frontbackground {
+  position: absolute;
+  background-color: #9c8cb9;
+  height: 100%;
+  width: 70%;
+  top: 0px;
 }
-.container input:focus {
-  outline: none;
-}
-.container {
+.signinorsignup {
   position: fixed;
-  top: 180px;
-  left: 820px;
-  border: 3px solid rgba(255, 255, 255, 0.964);
-  background-color: rgba(255, 255, 255, 0.538);
-  box-shadow: 4px 4px 40px 4px black;
+  top: 200px;
+  left: 920px;
+  border: 3px solid black;
+  height: 400px;
+  width: 300px;
+  transition: all 5s ease-in-out;
   border-radius: 20px;
-  padding: 60px
+  backdrop-filter: blur(10px);
 }
-.container {
-  transition: width 2s, height 2s, transform 0.8s;
+.buttoncontainer {
+  position: relative;
+  border-color: yellow;
+  width: 112px;
+  height: 41px;
+  top: 20px;
+  background-color: blue;
+  border-radius: 20px;
 }
-.container:hover {
-  transform:scale(1.06)
-} 
-.container h1 {
-  margin-top: 0px;
-  text-align: center;
+.signupbutton {
+  position: absolute; 
+  top: 22px;
+  left: 1200px;
+  border-radius: 20px;
+  padding: 10px;
+  border: 0px;
+  width: 80px;
 }
-.container form p {
-  margin-top: 30px;
-  margin-left: 15px;
-}
-.container button:hover {
+.signupbutton:hover {
   cursor: pointer;
-  background-color: rgb(106, 106, 199);
-  color: #DCE4C9;
 }
-.signup {
-  top: 48px;
-  left: 140px;
+.inputfield {
+  display: block;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 20px;
+  border:0px
 }
-.signupleftbackground {
-  float: left;
-  background-color: #F5F5DC;
-  height: 740px;
-  width: 320px;
+.registerbutton {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100px;
+  border: 0px;
+  background-color: tomato;
 }
-.signuprightbackground {
-  background-color: #DCE4C9;
-  height: 740px;
-  width: 100%;
+.loginbutton {
+  width: 100px;
+  padding: 10px;
+  background-color: blue;
+  border-radius: 20px;
+  margin-top: 25px;
 }
-.Navbar {
-  list-style-type: none;
-  display: flex;
-  justify-content:space-evenly;
-  justify-self: end;
-  width: 600px;
+.registerbutton:hover {
+  cursor: pointer;
 }
-.profile a, .Navbar a {
-  text-decoration: none;
-}
-.profile {
-  float: left;
-  padding-left: 32px;
-}
-.leftbackground {
-  float: left;
-  background-color: #DCE4C9;
-  height: 740px;
-  width: 1000px;
-}
-.rightbackground {
-  background-color: #F5F5DC;
-  height: 740px;
-  width: 100%;
+.topic {
+  width: 180px;
+  margin-bottom: 30px;
 }
