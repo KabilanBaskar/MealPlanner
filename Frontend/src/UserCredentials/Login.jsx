@@ -24,9 +24,11 @@ const Login = () => {
         }
         try {
             const response = await axios.post("http://localhost:3000/signup", formData);
-            alert(response.success);
-            navigate("/Home");
-            
+            if(response.data.success){
+                navigate("/Home");
+            }else {
+                alert(response.data.message);
+            }
         } catch (error) {
             alert("Error: " + (error.response?.data?.message || "Something went wrong"));
         }
@@ -35,9 +37,11 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`http://localhost:3000/signin`, formData);
-            alert(response.success);
-            navigate("/Home");
-            
+            if(response.data.success){
+                navigate("/Home");
+            }else {
+                alert(response.data.message);
+            }
         } catch (error) {
             alert("Error: " + (error.response?.data?.message || "Something went wrong"));
         }
