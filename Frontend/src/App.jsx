@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Home />
           <Routes>
             <Route path='/' element={<Login />} />
             <Route path='/Home' element={<Home />} />
