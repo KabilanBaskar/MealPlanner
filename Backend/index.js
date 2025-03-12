@@ -5,6 +5,7 @@ const Signup = require("./Schema/UserSchema");
 const bcrypt = require("bcrypt");
 const mdb = require("mongoose");
 const dotenv = require("dotenv");
+const path = require("path");
 
 const app = express(); //Definning framework in a variable.
 const PORT =  3000; //local server running place
@@ -15,10 +16,10 @@ app.use(express.json()); //handle the json data
 app.use(bodyparser.urlencoded({ extended: true }));
 
 
-app.use(express.static("C://Users//kabil//Desktop//MealPlanner//Frontend//dist"));
+app.use(express.static(path.join(__dirname, '../Frontend/dist')));
 
-app.get("*", (req, res) => {
-    res.sendFile("C://Users//kabil//Desktop//MealPlanner//Frontend//dist//index.html");
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../Frontend/dist/index.html'));
 });
 
 mdb.connect(process.env.MONGODB_URL)
