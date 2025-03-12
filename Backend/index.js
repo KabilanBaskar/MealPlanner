@@ -7,7 +7,7 @@ const mdb = require("mongoose");
 const dotenv = require("dotenv");
 
 const app = express(); //Definning framework in a variable.
-const PORT =  process.env.PORT || 3000; //local server running place
+const PORT =  3000; //local server running place
 
 dotenv.config();
 app.use(cors()); // allow frontend to access backend
@@ -29,12 +29,12 @@ mdb.connect(process.env.MONGODB_URL)
     process.exit(1);
 })
 
-const deleteInvalidRecords = async () => {
-    await Signup.deleteMany({ mobile: null });
-    console.log("Deleted records with null mobile.");
-};
+// const deleteInvalidRecords = async () => {
+//     await Signup.deleteMany({ mobile: null });
+//     console.log("Deleted records with null mobile.");
+// };
 
-deleteInvalidRecords();
+// deleteInvalidRecords();
 
 app.post("/signup", async (req, res) => {
     try {
@@ -74,5 +74,5 @@ app.post("/signin", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server started successfully : http://localhost:${PORT}`);
+    console.log(`Server started successfully : ${PORT}`);
 });

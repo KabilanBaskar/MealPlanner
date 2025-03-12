@@ -1,6 +1,11 @@
 body {
   margin: 0px;
-  /* background-color: #cecbc5; */
+}
+.background {
+  background: linear-gradient(135deg, #75A5A8 10%, #D6A18D 70%);
+  background-size: 100% 742px;
+  background-repeat: no-repeat;
+  height: 742px;
 }
 .backbackground {
   position: absolute;
@@ -37,16 +42,15 @@ body {
   border-radius: 20px;
 }
 .signupbutton {
-  position: absolute; 
+  position: fixed; 
   top: 52px;
   left: 100px;
   border-radius: 20px;
   padding: 10px;
   border: 0px;
   width: 80px;
-}
-.signupbutton:hover {
   cursor: pointer;
+  z-index: 2;
 }
 .inputfield {
   display: block;
@@ -90,4 +94,117 @@ body {
   margin-bottom: 30px;
   margin-left: 64px;
   margin-top: 72px;
+}
+.profile img {
+  width: auto;
+  height: 40px;
+  float: left;
+  margin-left: 30px;
+  margin-top: 26px;
+  cursor: pointer;
+}
+.Navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  margin-right: 30px;
+  margin-top: 34px;
+  float: right;
+}
+.Navbar li button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+}
+.Navbar li {
+  justify-content: space-evenly;
+  padding-right: 20px;
+}
+.section {
+  background-color: #9c8cb9;
+  width: 10px;
+  height: 740px;
+  float: left;
+}
+.section .button {
+  background-color: transparent;
+  position: relative;
+  left: 260px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  border: 0px;
+}
+.section .img {
+  position: fixed;
+  left: 90px;
+  top: 100px;
+}
+.section .content {
+  position: relative;
+  border: 3px solid black;
+  width: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  top: 240px;
+  left: 70px;
+  text-align: center;
+}
+.tablebuttons {
+  position: fixed;
+  bottom: 160px;
+  left:600px;
+}
+.tablebuttons button {
+  padding: 14px;
+  border-radius: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.topic {
+  font-family: "Niconne", cursive;
+  font-size: 60px;
+  margin: 0px;
+}
+.topicdiv {
+  position: fixed;
+  top: 240px;
+  right: 30%;
+  z-index: 1;
+}
+.topicdiv .button {
+  margin-top: 40px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 17px;
+  border-radius: 60px;
+  width: 100px;
+  cursor: pointer;
+}
+.juiceimg {
+  height: 550px;
+  scale: 1.2;
+  padding-left: 180px;
+  transform: rotate(30deg);
+}
+.loginimage {
+  position: fixed;
+  top: 100px;
+  left: 180px;
+}
+.tablecontainer {
+  position: fixed;
+  top: 180px;
+  left: 300px;
+}
+.tablecontainer .table {
+  border-collapse: collapse;
+  width: 900px;
+  height: 400px;
+  border-radius: 20px;
+}
+th, td{
+  border: 2px solid black;
+  padding: 20px;
 }

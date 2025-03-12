@@ -48,29 +48,24 @@ const Login = () => {
     };
     return (
         <>
-            <div className="backbackground"></div>
-            <motion.button
-                className="signupbutton"
+        <div className="background">
+            <motion.img src="../../public/pngegg.png" alt="image" className="loginimage" initial={{opacity:0, y:1000}} animate={{opacity:1, y:0, rotate:click?360:180}} transition={{duration:1.5}}/>
+            <motion.button className="signupbutton"
                 onClick={(e) => {
                     e.preventDefault();
                     setMove(!move);
                     setClick(!click);
                 }}
+                initial={{opacity:0, x:2000}}
                 animate={{
+                    opacity:1,
+                    x:0,
                     left: click ? 1370 : 1370, 
                 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1.2 }}
             >
             {click ? "Sign-in" : "Sign-up"}
             </motion.button>
-            <motion.div 
-                className="frontbackground"
-                animate={{
-                    x: move ? -700 : 0,
-                }}
-                transition={{ duration: 1 }}
-            >    
-             
                 <div className="signinorsignup">
                     {click ? (
                         // Sign-up Form
@@ -169,9 +164,7 @@ const Login = () => {
                         </div>
                     )}
                 </div>
-                
-            </motion.div>
-            
+            </div>
         </>
     );
 };

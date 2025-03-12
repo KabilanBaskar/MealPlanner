@@ -11,19 +11,17 @@ import './App.css'
 function App() {
 
   return (
-    <>
-      <BrowserRouter>
-        <Home />
-          <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='/Home' element={<Home />} />
-            <Route path='/MyTable' element={<MyTable />} />
-            <Route path='/Tracker' element={<Tracker />} />
-            <Route path='/Rewards' element={<Rewards />} />
-            <Route path='/FoodSection' element={<FoodSection />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/Login' element={<Login />}></Route>
+        <Route path='/Home' element={<Navbar />}></Route>
+        <Route path='/MyTable' element={<MyTable />}></Route>
+        <Route path='/Tracker' element={<Tracker />}></Route>
+        <Route path='/Rewards' element={<Rewards />}></Route>
+        <Route path='/Foodsection' element={<FoodSection />}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
