@@ -15,11 +15,12 @@ app.use(cors()); // allow frontend to access backend
 app.use(express.json()); //handle the json data
 app.use(bodyparser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, '..', 'Frontend', 'dist')));
+app.use(express.static(path.join(__dirname, 'Frontend/dist')));
 
+// Serve index.html for all routes
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'Frontend', 'dist', 'index.html'));
-  });
+  res.sendFile(path.join(__dirname, '../Frontend/dist/index.html'));
+});
 
 mdb.connect(process.env.MONGODB_URL)
 .then( () => {
@@ -36,7 +37,7 @@ mdb.connect(process.env.MONGODB_URL)
 
 // deleteInvalidRecords();
 
-app.post("/signup", async (req, res) => {
+app.post("/Login", async (req, res) => {
     try {
         let { fullName, email, password, mobile } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -56,7 +57,7 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-app.post("/signin", async (req, res) => {
+app.post("/Login", async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = await Signup.findOne({ email });
