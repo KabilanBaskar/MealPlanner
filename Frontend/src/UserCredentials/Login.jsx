@@ -23,7 +23,7 @@ const Login = () => {
             return;
         }
         try {
-            const response = await axios.post("https://meal-planner-z447.onrender.com/Login", formData);
+            const response = await axios.post("https://meal-planner-z447.onrender.com/signup", formData);
             if(response.data.success){
                 navigate("/Home");
             }else {
@@ -36,7 +36,7 @@ const Login = () => {
     const handleSignIn = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`https://meal-planner-z447.onrender.com/Login`, formData);
+            const response = await axios.post(`https://meal-planner-z447.onrender.com/signin`, formData);
             if(response.data.success){
                 navigate("/Home");
             }else {

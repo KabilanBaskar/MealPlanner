@@ -37,7 +37,7 @@ mdb.connect(process.env.MONGODB_URL)
 
 // deleteInvalidRecords();
 
-app.post("/Login", async (req, res) => {
+app.post("/signup", async (req, res) => {
     try {
         let { fullName, email, password, mobile } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -57,7 +57,7 @@ app.post("/Login", async (req, res) => {
     }
 });
 
-app.post("/Login", async (req, res) => {
+app.post("/signin", async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = await Signup.findOne({ email });
