@@ -49,7 +49,7 @@ const Login = () => {
     return (
         <>
         <div className="background">
-            <motion.img src="../../public/pngegg.png" alt="image" className="loginimage" initial={{opacity:0, y:1000}} animate={{opacity:1, y:0, rotate:click?360:180}} transition={{duration:1.5}}/>
+            <motion.img src="./pngegg.png" alt="image" className="loginimage" initial={{opacity:0, y:1000}} animate={{opacity:1, y:0, rotate:click?360:180}} transition={{duration:1.5}}/>
             <motion.button className="signupbutton"
                 onClick={(e) => {
                     e.preventDefault();

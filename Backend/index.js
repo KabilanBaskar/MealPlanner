@@ -15,12 +15,11 @@ app.use(cors()); // allow frontend to access backend
 app.use(express.json()); //handle the json data
 app.use(bodyparser.urlencoded({ extended: true }));
 
-
-app.use(express.static(path.join(__dirname, '../Frontend/dist')));
+app.use(express.static(path.join(__dirname, '..', 'Frontend', 'dist')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Frontend/dist/index.html'));
-});
+    res.sendFile(path.join(__dirname, '..', 'Frontend', 'dist', 'index.html'));
+  });
 
 mdb.connect(process.env.MONGODB_URL)
 .then( () => {
@@ -75,5 +74,5 @@ app.post("/signin", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server started successfully : ${PORT}`);
+    console.log(`Server started successfully : http://localhost:${PORT}`);
 });
